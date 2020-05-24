@@ -1,0 +1,200 @@
+@font-face {
+	font-family: 'Regular';
+	src: url('../assets/fonts/Graphik-Regular.eot');
+	src: url('../assets/fonts/Graphik-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../assets/fonts/Graphik-Regular.woff') format('woff'),
+		url('../assets/fonts/Graphik-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Semibold';
+	src: url('../assets/fonts/Graphik-Semibold.eot');
+	src: url('../assets/fonts/Graphik-Semibold.eot?#iefix') format('embedded-opentype'),
+		url('../assets/fonts/Graphik-Semibold.woff') format('woff'),
+		url('../assets/fonts/Graphik-Semibold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Medium';
+	src: url('../assets/fonts/Graphik-Medium.eot');
+	src: url('../assets/fonts/Graphik-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../assets/fonts/Graphik-Medium.woff') format('woff'),
+		url('../assets/fonts/Graphik-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+ 
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+html, body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    padding:0;
+    margin:0;
+	font-size: 16px;
+}
+
+body {
+	margin: 0 10vmin;
+}
+::selection {
+  color: rgba(255,255,255,.99);
+  background: rgba(0,0,0,.99);
+}
+::-moz-selection {
+  color: rgba(255,255,255,.99);
+  background: rgba(0,0,0,.99);
+}
+
+.maxwidth {
+	max-width: 940px;
+	margin: 0 auto;
+}
+/* ----- intro ----- */
+.logo {
+	font-family: 'Semibold';
+    font-size: 2vw;
+    font-size: 1.6em;
+	line-height: 80%;
+	color: #111111;
+	margin: 12vmin 0 18vmin 0;
+}
+
+h1 {
+	font-family: 'Semibold';
+    font-size: 6.4vw;
+    font-size: 5em;
+	line-height: 120%;
+	color: #111111;
+	margin-bottom: 18vmin;
+}
+.photo {
+	background-image: url(../assets/img/Nenad.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: auto;
+	max-width: 100%; 
+    box-sizing: border-box;
+	margin: 10vmin auto;
+	border-radius: 50%;
+}
+
+p.large {
+	font-family: 'Medium';
+    font-size: 2vw;
+    font-size: 1.6em;
+	color: #111111;
+	line-height: 140%;
+	margin-bottom: 6vmin;
+	overflow: hidden;
+}
+
+p {
+	font-family: 'Regular';
+    font-size: 1.5vw;
+    font-size: 1.2em;
+
+	color: #111111;
+	line-height: 160%;
+	margin-bottom: 4vmin;
+	overflow: hidden;
+}
+p a, p a:after, p a:visited {
+	font-family: 'Semibold';
+	font-weight: bold;
+	text-decoration: underline;
+	color: #111111;
+	cursor: pointer;
+}
+
+/* ----- contact ----- */
+
+h2 {
+	font-family: 'Semibold';
+    font-size: 4vw;
+    font-size: 2.6em;
+	line-height: 160%;
+	color: #111111;
+	margin: 0 0 4vmin 0;
+}
+
+.contact-list {
+	margin: 10vmin 0 20vmin 0;	
+}
+.contact {
+	font-family: 'Regular';
+    font-size: 1.5vw;
+    font-size: 1.2em;
+	color: #111111;
+	line-height: 180%;
+}
+
+.contact a, a:after, a:visited {
+	color: #111111;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+
+/* ----- animation ----- */
+.animate {
+	-webkit-animation:animate .6s cubic-bezier(0.2, 0.6, 0.2, 1);
+	-moz-animation:animate .6s cubic-bezier(0.2, 0.6, 0.2, 1);
+	animation:animate .6s cubic-bezier(0.2, 0.6, 0.2, 1);
+	-webkit-animation-fill-mode:backwards;
+	-moz-animation-fill-mode:backwards;
+	animation-fill-mode:backwards;
+}
+@-webkit-keyframes animate {
+	0% {opacity: 0;-webkit-transform: translateY(80px);}
+	100% {opacity: 1;-webkit-transform: translateY(0%);}	
+}
+
+@keyframes animate {
+	0% {opacity: 0;transform: translateY(80px);}
+	100% {opacity: 1;transform: translateY(0%);}	
+}
+.delayimage { -webkit-animation-delay: .4s; animation-delay: .4s;}
+.delaytitle { -webkit-animation-delay: .6s; animation-delay: .6s;}
+.delaycontent { -webkit-animation-delay: .8s; animation-delay: .8s;}
+
+
+
+@media screen and (max-width: 767px) {
+	body {
+		margin: 0;
+	}
+	.maxwidth {
+		margin: 0 6%;
+	}
+	h1 {
+		font-size: 3.5em;
+		margin-bottom: 6vmin;
+	}
+	.photo {
+		background-image: url(../assets/img/Nenad_mobile.png);
+		background-position: center center;
+	}
+}
