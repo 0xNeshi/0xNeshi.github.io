@@ -299,7 +299,7 @@ a:visited {
     margin-bottom: 6vmin;
   }
   .photo {
-    content: url(assets/img/Nenad_mobile.png);
+    content: url(../assets/img/Nenad_mobile.png);
     width: 60%;
   }
   .delayimage {
