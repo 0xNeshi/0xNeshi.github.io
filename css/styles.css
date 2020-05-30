@@ -186,10 +186,17 @@ p {
   margin-bottom: 4vmin;
   overflow: hidden;
 }
-p a,
-p a:after,
-p a:visited {
+
+.resume {
+  margin-top: 10vmin;
+}
+
+.resume a,
+a:after,
+a:visited {
   font-family: "Semibold";
+  font-size: 2vw;
+  font-size: 1.2em;
   font-weight: bold;
   text-decoration: underline;
   color: #111111;
