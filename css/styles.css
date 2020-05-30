@@ -171,6 +171,10 @@ p.large {
 }
 
 p {
+  overflow: hidden;
+}
+p,
+li {
   font-family: "Regular";
   font-size: 1.5vw;
   font-size: 1.2em;
@@ -178,7 +182,10 @@ p {
   color: #111111;
   line-height: 160%;
   margin-bottom: 4vmin;
-  overflow: hidden;
+}
+
+b {
+  font-weight: bolder;
 }
 
 .resume {
@@ -270,66 +277,6 @@ a:visited {
   animation-delay: 0.8s;
 }
 
-.carousel-item {
-  transition: transform 1s ease, opacity 0.5s ease-out;
-}
-.carousel-item img {
-  cursor: pointer;
-}
-.carousel .carousel-caption {
-  visibility: hidden;
-}
-.carousel:hover .carousel-caption {
-  visibility: visible;
-}
-.carousel-caption {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0%, rgba(0, 0, 0, 0)),
-    color-stop(100%, rgba(0, 0, 0, 1))
-  );
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.carousel-inner>.item {
-  -webkit-transition: 0s !important;
-  -o-transition: 0s !important;
-  transition: 0s !important;
-}
-
-.carousel-caption p {
-  color: whitesmoke;
-}
-.portfolio .portfolio-item {
-  cursor: pointer;
-  position: relative;
-  display: block;
-  max-width: 25rem;
-  border-radius: 0.5rem;
-  overflow: hidden;
-}
-.portfolio .portfolio-item .portfolio-item-caption {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: all 0.2s ease-in-out;
-  opacity: 0;
-  background-color: rgba(26, 188, 156, 0.9);
-}
-.portfolio .portfolio-item .portfolio-item-caption:hover {
-  opacity: 1;
-}
-.portfolio
-  .portfolio-item
-  .portfolio-item-caption
-  .portfolio-item-caption-content {
-  font-size: 1.5rem;
-}
-
 @media screen and (max-width: 1200px) {
   h1 {
     font-size: 4.5em;
@@ -368,6 +315,6 @@ a:visited {
     transition: transform 0.5s ease;
     transition: transform 0.5s ease, -webkit-transform 0.5s ease;
     -webkit-backface-visibility: visible;
-            backface-visibility: visible;
+    backface-visibility: visible;
   }
 }
