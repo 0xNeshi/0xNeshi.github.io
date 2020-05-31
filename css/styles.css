@@ -157,6 +157,8 @@ h1 {
 }
 img {
   margin: 6vmin auto;
+  width: 100%;
+  height: auto;
 }
 
 p.large {
