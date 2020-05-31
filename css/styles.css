@@ -155,8 +155,7 @@ h1 {
   color: #111111;
   margin-bottom: 18vmin;
 }
-.photo {
-  content: url(../assets/img/Nenad.png);
+img {
   margin: 6vmin auto;
 }
 
