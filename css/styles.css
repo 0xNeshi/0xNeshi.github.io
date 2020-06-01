@@ -155,11 +155,6 @@ h1 {
   color: #111111;
   margin-bottom: 18vmin;
 }
-img {
-  margin: 6vmin auto;
-  width: 100%;
-  height: auto;
-}
 
 p.large {
   font-family: "Medium";
@@ -278,9 +273,57 @@ a:visited {
   animation-delay: 0.8s;
 }
 
+/* progressive image CSS */
+a.progressive {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  outline: none;
+  margin: 6vmin auto;
+  max-width: 350px;
+}
+
+a.progressive:not(.replace) {
+  cursor: default;
+}
+
+a.progressive img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  border: 0 none;
+}
+
+a.progressive img.preview {
+  filter: blur(2vw);
+  transform: scale(1.05);
+}
+
+a.progressive img.reveal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  will-change: transform, opacity;
+  animation: reveal 1s ease-out;
+}
+img {
+  max-width: 100%;
+}
+
+@keyframes reveal {
+    0% { transform: scale(1.05); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
 @media screen and (max-width: 1200px) {
   h1 {
     font-size: 4.5em;
+  }
+  a.progressive {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 6vmin;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -317,5 +360,8 @@ a:visited {
     transition: transform 0.5s ease, -webkit-transform 0.5s ease;
     -webkit-backface-visibility: visible;
     backface-visibility: visible;
+  }
+  a.progressive {
+    max-width: 300px;
   }
 }
