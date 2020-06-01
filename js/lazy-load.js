@@ -3,12 +3,14 @@ if (
   window.addEventListener &&
   window.requestAnimationFrame &&
   document.getElementsByClassName
-)
+) {
   window.addEventListener(
     "load",
     function () {
       // start
-      var pItem = document.getElementsByClassName("progressive replace"),
+      var lazyLoadedImageContainer = document.getElementsByClassName(
+          "progressive replace"
+        ),
         timer;
 
       window.addEventListener("scroll", scroller, false);
@@ -27,21 +29,29 @@ if (
 
       // image in view?
       function inView() {
-        var wT = window.pageYOffset,
-          wB = wT + window.innerHeight,
-          cRect,
-          pT,
-          pB,
-          p = 0;
-        while (p < pItem.length) {
-          cRect = pItem[p].getBoundingClientRect();
-          pT = wT + cRect.top;
-          pB = pT + cRect.height;
+        var pageYOffset = window.pageYOffset,
+          innerHeight = pageYOffset + window.innerHeight,
+          containerRect,
+          containerRectTopOffset,
+          containerRectBottomOffset,
+          index = 0;
+        while (index < lazyLoadedImageContainer.length) {
+          containerRect = lazyLoadedImageContainer[
+            index
+          ].getBoundingClientRect();
+          containerRectTopOffset = pageYOffset + containerRect.top;
+          containerRectBottomOffset =
+            containerRectTopOffset + containerRect.height;
 
-          if (wT < pB && wB > pT) {
-            loadFullImage(pItem[p]);
-            pItem[p].classList.remove("replace");
-          } else p++;
+          if (
+            pageYOffset < containerRectBottomOffset &&
+            innerHeight > containerRectTopOffset
+          ) {
+            loadFullImage(lazyLoadedImageContainer[index]);
+            lazyLoadedImageContainer[index].classList.remove("replace");
+          } else {
+            index++;
+          }
         }
       }
 
@@ -57,8 +67,11 @@ if (
         }
         img.src = item.href;
         img.className = "reveal";
-        if (img.complete) addImg();
-        else img.onload = addImg;
+        if (img.complete) {
+          addImg();
+        } else {
+          img.onload = addImg;
+        }
 
         // replace image
         function addImg() {
@@ -74,10 +87,11 @@ if (
           // add full image
           item.appendChild(img).addEventListener("animationend", function (e) {
             // remove preview image
-            var pImg = item.querySelector && item.querySelector("img.preview");
-            if (pImg) {
-              e.target.alt = pImg.alt || "";
-              item.removeChild(pImg);
+            var previewImage =
+              item.querySelector && item.querySelector("img.preview");
+            if (previewImage) {
+              e.target.alt = previewImage.alt || "";
+              item.removeChild(previewImage);
               e.target.classList.remove("reveal");
             }
           });
@@ -86,3 +100,4 @@ if (
     },
     false
   );
+}

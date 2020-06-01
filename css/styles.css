@@ -1,109 +1,20 @@
-@font-face {
-  font-family: "Regular";
-  src: url("../assets/fonts/Graphik-Regular.eot");
-  src: url("../assets/fonts/Graphik-Regular.eot?#iefix")
-      format("embedded-opentype"),
-    url("../assets/fonts/Graphik-Regular.woff") format("woff"),
-    url("../assets/fonts/Graphik-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Semibold";
-  src: url("../assets/fonts/Graphik-Semibold.eot");
-  src: url("../assets/fonts/Graphik-Semibold.eot?#iefix")
-      format("embedded-opentype"),
-    url("../assets/fonts/Graphik-Semibold.woff") format("woff"),
-    url("../assets/fonts/Graphik-Semibold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Medium";
-  src: url("../assets/fonts/Graphik-Medium.eot");
-  src: url("../assets/fonts/Graphik-Medium.eot?#iefix")
-      format("embedded-opentype"),
-    url("../assets/fonts/Graphik-Medium.woff") format("woff"),
-    url("../assets/fonts/Graphik-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-
 html,
 body,
 div,
-span,
-applet,
-object,
-iframe,
 p,
-blockquote,
-pre,
 a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
 img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
 strong,
-sub,
-sup,
-tt,
-var,
 b,
-u,
 i,
-center,
-dl,
-dt,
-dd,
 ol,
 ul,
 li,
-fieldset,
-form,
-label,
-legend,
-table,
 caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
 article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
 header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
 section,
-summary,
-time,
-mark,
-audio,
-video {
+summary {
   margin: 0;
   padding: 0;
   border: 0;
@@ -111,6 +22,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
 html,
 body {
   -webkit-font-smoothing: antialiased;
@@ -139,7 +51,8 @@ body {
 }
 /* ----- intro ----- */
 .logo {
-  font-family: "Semibold";
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: bold;
   font-size: 2vw;
   font-size: 1.6em;
   line-height: 80%;
@@ -148,7 +61,8 @@ body {
 }
 
 h1 {
-  font-family: "Semibold";
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: bold;
   font-size: 6.4vw;
   font-size: 5em;
   line-height: 120%;
@@ -157,7 +71,8 @@ h1 {
 }
 
 p.large {
-  font-family: "Medium";
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: bold;
   font-size: 2vw;
   font-size: 1.6em;
   color: #111111;
@@ -171,7 +86,7 @@ p {
 }
 p,
 li {
-  font-family: "Regular";
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 1.5vw;
   font-size: 1.2em;
 
@@ -191,7 +106,8 @@ b {
 .resume a,
 a:after,
 a:visited {
-  font-family: "Semibold";
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: bold;
   font-size: 2vw;
   font-size: 1.2em;
   font-weight: bold;
@@ -203,7 +119,8 @@ a:visited {
 /* ----- contact ----- */
 
 h2 {
-  font-family: "Semibold";
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: bold;
   font-size: 4vw;
   font-size: 2.6em;
   line-height: 160%;
@@ -215,7 +132,7 @@ h2 {
   margin: 10vmin 0 20vmin 0;
 }
 .contact {
-  font-family: "Regular";
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 1.5vw;
   font-size: 1.2em;
   color: #111111;
@@ -260,6 +177,7 @@ a:visited {
     transform: translateY(0%);
   }
 }
+
 .delayimage {
   -webkit-animation-delay: 0.4s;
   animation-delay: 0.4s;
@@ -307,13 +225,16 @@ a.progressive img.reveal {
   will-change: transform, opacity;
   animation: reveal 1s ease-out;
 }
-img {
-  max-width: 100%;
-}
 
 @keyframes reveal {
-    0% { transform: scale(1.05); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
+  0% {
+    transform: scale(1.05);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -342,10 +263,6 @@ img {
     font-size: 3.5em;
     margin-bottom: 6vmin;
   }
-  .photo {
-    content: url(../assets/img/Nenad_mobile.png);
-    width: 60%;
-  }
   .delayimage {
     -webkit-animation-delay: 0.6s;
     animation-delay: 0.6s;
@@ -353,13 +270,6 @@ img {
   .delaytitle {
     -webkit-animation-delay: 0.4s;
     animation-delay: 0.4s;
-  }
-  .carousel-item {
-    transition: -webkit-transform 0.5s ease;
-    transition: transform 0.5s ease;
-    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-    -webkit-backface-visibility: visible;
-    backface-visibility: visible;
   }
   a.progressive {
     max-width: 300px;
