@@ -338,4 +338,7 @@ iframe {
   h1 {
     font-size: 2.5em;
   }
+  .main-col{
+    padding-left: 0;
+  }
 }
