@@ -222,6 +222,7 @@ a.progressive img.reveal {
 iframe {
   width: 100vw;
   height: 99vh;
+  padding-left: 0;
 }
 /* The side navigation menu */
 .sidenav {
@@ -267,14 +268,19 @@ iframe {
     margin-right: auto;
     margin-bottom: 6vmin;
   }
+iframe {
+  padding-left: 100px;
+}
 }
 @media screen and (max-width: 1000px) {
   h1 {
     font-size: 3.5em;
   }
 }
-
 @media screen and (max-width: 900px) {
+  iframe {
+    padding-left: 0;
+  }
   .sidenav {
     width: 100%;
     height: auto;
