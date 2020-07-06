@@ -10,6 +10,35 @@
 
     <!-- CSS -->
     <link href="../css/styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Add smooth scrolling to all links
+        $("a").on("click", function (event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800,
+              function () {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
+      });
+    </script>
   </head>
 
   <body>
@@ -18,7 +47,18 @@
         <div class="row">
           <div class="col">
             <ul>
-              <li><b>Languages:</b> C#, TypeScript, T-SQL, GraphQL</li>
+              <li class="hoverable-link no-list-style">
+                <h3><a href="#languages">Languages</a></h3>
+                <ul>
+                  <li><a href="#csharp">C#</a></li>
+                  <li><a href="#typescript">TypeScript</a></li>
+                  <li><a href="#tsql">T-SQL</a></li>
+                  <li><a href="#graphql">GraphQL</a></li>
+                  <li><a href="#python">Python</a></li>
+                  <li><a href="#powershell">PowerShell</a></li>
+                </ul>
+              </li>
+              <!-- 
               <li>
                 <b>Backend Frameworks:</b> ASP.NET Core, Entity Framework Core,
                 xUnit, Autofac, Rebus, Serilog, Swashbuckle, AutoMapper
@@ -28,8 +68,84 @@
               <li><b>DBMS:</b> Microsoft SQL Server, CosmosDB</li>
               <li><b>Tools:</b> Git, NuGet, Atlassian Stack</li>
               <li><b>Editors:</b> Visual Studio, Visual Studio Code</li>
-              <li><b>Operating Systems:</b> Windows, Linux</li>
+              <li><b>Operating Systems:</b> Windows, Linux</li> -->
             </ul>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col">
+            <h1 class="mb-5 skills-highlights">Highlights</h1>
+            <section id="languages">
+              <h2>Languages</h2>
+              <ul>
+                <li class="no-list-style">
+                  <h3 id="csharp">C#</h3>
+                  <ul>
+                    <li>
+                      Used advanced C# features and design patterns to create
+                      code that’s as efficient as possible
+                    </li>
+                    <li>
+                      Developed Web-Apps using ASP.NET and ASP.NET Core
+                    </li>
+                  </ul>
+                </li>
+                <li class="no-list-style">
+                  <h3 id="typescript">TypeScript</h3>
+                  <ul>
+                    <li>
+                      Worked on many Angular projects which utilized TypeScript
+                    </li>
+                  </ul>
+                </li>
+                <li class="no-list-style">
+                  <h3 id="tsql">T-SQL</h3>
+                  <ul>
+                    <li>
+                      Experience improving the efficiency of T-SQL View creation
+                      queries and cutting their execution time
+                    </li>
+                  </ul>
+                </li>
+                <li class="no-list-style">
+                  <h3 id="graphql">GraphQL</h3>
+                  <ul>
+                    <li>
+                      Configured and used both the GraphQL clients and GraphQL
+                      endpoints on multiple ASP.NET and Angular projects
+                    </li>
+                  </ul>
+                </li>
+                <li class="no-list-style">
+                  <h3 id="python">Python</h3>
+                  <ul>
+                    <li>
+                      Created a console BlackJack game
+                    </li>
+                    <li>
+                      Created and enhanced several file/folder managing scripts
+                      for automating some personal daily PC maintenance
+                    </li>
+                    <li>
+                      Acquired a solid grasp of Python basics
+                    </li>
+                  </ul>
+                </li>
+                <li class="no-list-style">
+                  <h3 id="powershell">PowerShell</h3>
+                  <ul>
+                    <li>
+                      Automated of repetitive tasks like creation of test
+                      coverage reports
+                    </li>
+                    <li>
+                      Created of Azure infrastructure (using the Az Module)
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </section>
           </div>
         </div>
       </div>

@@ -8,8 +8,6 @@ strong,
 b,
 i,
 ol,
-ul,
-li,
 caption,
 article,
 header,
@@ -83,6 +81,10 @@ li {
   color: #111111;
   line-height: 160%;
   margin-bottom: 4vmin;
+}
+
+li {
+  margin-bottom: 0;
 }
 
 b {
@@ -248,6 +250,10 @@ iframe {
   transition: 0.3s;
 }
 
+.no-list-style {
+  list-style: none;
+}
+
 @keyframes reveal {
   0% {
     transform: scale(1.05);
@@ -256,6 +262,12 @@ iframe {
   100% {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .skills-highlights {
+    font-size: 3.5em;
   }
 }
 
@@ -268,9 +280,9 @@ iframe {
     margin-right: auto;
     margin-bottom: 6vmin;
   }
-iframe {
-  padding-left: 100px;
-}
+  iframe {
+    padding-left: 100px;
+  }
 }
 @media screen and (max-width: 1000px) {
   h1 {
