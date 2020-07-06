@@ -49,16 +49,6 @@ body {
   max-width: 940px;
   margin: 0 auto;
 }
-/* ----- intro ----- */
-.logo {
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 2vw;
-  font-size: 1.6em;
-  line-height: 80%;
-  color: #111111;
-  margin: 12vmin 0 18vmin 0;
-}
 
 h1 {
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -131,7 +121,7 @@ h2 {
 .contact-list {
   margin: 10vmin 0 20vmin 0;
 }
-.contact {
+.hoverable-link {
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 1.5vw;
   font-size: 1.2em;
@@ -139,7 +129,7 @@ h2 {
   line-height: 180%;
 }
 
-.contact a,
+.hoverable-link a,
 a:after,
 a:visited {
   color: #111111;
@@ -226,6 +216,34 @@ a.progressive img.reveal {
   animation: reveal 1s ease-out;
 }
 
+.main {
+  margin-left: 150px;
+  margin-top: 50px;
+}
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 150px; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: whitesmoke;
+  display: block;
+  transition: 0.3s;
+}
+
 @keyframes reveal {
   0% {
     transform: scale(1.05);
@@ -252,6 +270,22 @@ a.progressive img.reveal {
     font-size: 3.5em;
   }
 }
+
+@media screen and (max-width: 900px) {
+  .sidenav {
+    width: 100%;
+    height: auto;
+  }
+  .sidenav a {
+    padding: 8px 8px 8px 16px;
+    float: left;
+    font-size: 17px;
+  }
+  .main {
+    margin-left: 0;
+    margin-top: 150px;
+  }
+}
 @media screen and (max-width: 767px) {
   body {
     margin: 0;
@@ -260,7 +294,7 @@ a.progressive img.reveal {
     margin: 0 6%;
   }
   h1 {
-    font-size: 3.5em;
+    font-size: 3em;
     margin-bottom: 6vmin;
   }
   .delayimage {
@@ -273,5 +307,19 @@ a.progressive img.reveal {
   }
   a.progressive {
     max-width: 300px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+  .main {
+    margin-top: 100px;
+  }
+  h1 {
+    font-size: 2.5em;
   }
 }
