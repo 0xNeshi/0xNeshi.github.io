@@ -118,6 +118,9 @@ h2 {
   margin: 0 0 4vmin 0;
 }
 
+.container {
+  margin-top: 100px;
+}
 .contact-list {
   margin: 10vmin 0 20vmin 0;
 }
@@ -216,9 +219,9 @@ a.progressive img.reveal {
   animation: reveal 1s ease-out;
 }
 
-.main {
-  margin-left: 150px;
-  margin-top: 50px;
+iframe {
+  width: 100vw;
+  height: 99vh;
 }
 /* The side navigation menu */
 .sidenav {
@@ -281,10 +284,6 @@ a.progressive img.reveal {
     float: left;
     font-size: 17px;
   }
-  .main {
-    margin-left: 0;
-    margin-top: 150px;
-  }
 }
 @media screen and (max-width: 767px) {
   body {
@@ -315,9 +314,6 @@ a.progressive img.reveal {
   }
   .sidenav a {
     font-size: 18px;
-  }
-  .main {
-    margin-top: 100px;
   }
   h1 {
     font-size: 2.5em;
