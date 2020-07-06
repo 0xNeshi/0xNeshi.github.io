@@ -135,6 +135,11 @@
       crossorigin="anonymous"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
     <!-- CSS -->
     <link href="../css/styles.css" rel="stylesheet" type="text/css" />
   </head>
@@ -151,22 +156,34 @@
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <div id="sidenav" class="sidenav">
+    <div id="sidenav" class="sidenav animate-sidebar delaycontent">
       <a class="hoverable-link" href="./home.html" target="targetframe"
-        >Home</a
+        >Nenad Misic</a
       >
-      <a class="hoverable-link" href="./aboutme.html" target="targetframe"
-        >About me</a
+      <div id="myLinks">
+        <a class="hoverable-link" href="./home.html" target="targetframe"
+          >Home</a
+        >
+        <a class="hoverable-link" href="./aboutme.html" target="targetframe"
+          >About me</a
+        >
+        <a class="hoverable-link" href="./skills.html" target="targetframe"
+          >Skills</a
+        >
+        <!-- <a class="hoverable-link" href="./projects.html" target="targetframe"
+          >Projects</a
+        > -->
+        <a class="hoverable-link" href="./contact.html" target="targetframe"
+          >Contact</a
+        >
+      </div>
+      <a
+        href="javascript:void(0);"
+        class="icon"
+        onclick="myFunction()"
       >
-      <a class="hoverable-link" href="./skills.html" target="targetframe"
-        >Skills</a
-      >
-      <!-- <a class="hoverable-link" href="./projects.html" target="targetframe"
-        >Projects</a
-      > -->
-      <a class="hoverable-link" href="./contact.html" target="targetframe"
-        >Contact</a
-      >
+        <i class="fa fa-bars"></i>
+      </a>
     </div>
 
     <div style="width: 90vw;">
@@ -180,6 +197,17 @@
       </iframe>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../js/lazy-load.js"></script>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+    </script>
   </body>
 </html>
