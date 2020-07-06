@@ -19,6 +19,7 @@ summary {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  overflow-x: hidden;
 }
 
 html,
@@ -223,13 +224,13 @@ a.progressive img.reveal {
 
 iframe {
   width: 100vw;
-  height: 99vh;
+  height: 95vh;
   padding-left: 0;
 }
 /* The side navigation menu */
 .sidenav {
   height: 100%; /* 100% Full-height */
-  width: 150px; /* 0 width - change this with JavaScript */
+  width: 250px; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
@@ -250,7 +251,8 @@ iframe {
   transition: 0.3s;
 }
 
-.no-list-style {
+.skills-subheader-list-item {
+  margin-top: 20px;
   list-style: none;
 }
 
