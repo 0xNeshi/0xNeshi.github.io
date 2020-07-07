@@ -144,7 +144,7 @@
     <link href="../css/styles.css" rel="stylesheet" type="text/css" />
   </head>
 
-  <body>
+  <body class="main-body">
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
@@ -157,6 +157,17 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <div id="sidenav" class="sidenav animate-sidebar delaycontent">
+      <a
+        href="../assets/img/Nenad.png"
+        class="progressive replace animate delayimage rounded-circle img-fluid"
+        alt="profile image"
+      >
+        <img
+          src="../assets/img/Nenad_blurred.png"
+          class="preview"
+          alt="profile image blurred"
+        />
+      </a>
       <a class="hoverable-link" href="./home.html" target="targetframe"
         >Nenad Misic</a
       >
@@ -177,16 +188,12 @@
           >Contact</a
         >
       </div>
-      <a
-        href="javascript:void(0);"
-        class="icon"
-        onclick="myFunction()"
-      >
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
       </a>
     </div>
 
-    <div style="width: 90vw;">
+    <div class="content-container">
       <iframe
         src="./home.html"
         name="targetframe"
@@ -197,7 +204,6 @@
       </iframe>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../js/lazy-load.js"></script>
     <script>
       function myFunction() {

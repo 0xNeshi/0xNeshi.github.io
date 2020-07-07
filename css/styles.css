@@ -30,6 +30,8 @@ body {
   padding: 0;
   margin: 0;
   font-size: 16px;
+  width: 100vw;
+  height: 100vh;
 }
 
 ::selection {
@@ -39,11 +41,6 @@ body {
 ::-moz-selection {
   color: rgba(255, 255, 255, 0.99);
   background: rgba(0, 0, 0, 0.99);
-}
-
-.maxwidth {
-  max-width: 940px;
-  margin: 0 auto;
 }
 
 h1 {
@@ -248,22 +245,29 @@ a.progressive img.reveal {
   animation: reveal 1s ease-out;
 }
 
-iframe {
-  width: 100vw;
-  height: 95vh;
-  padding-left: 0;
+.main-body {
+  display: flex;
+  flex-direction: row;
 }
+.child-body {
+  padding: 20px 20px;
+}
+iframe {
+  flex: 1; 
+}
+.content-container {
+  overflow: hidden;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 /* The side navigation menu */
 .sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 250px; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
   z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
   background-color: #111; /* Black*/
-  overflow: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
+  overflow: hidden; /* Disable scroll */
+  padding-top: 30px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
@@ -275,6 +279,13 @@ iframe {
   color: whitesmoke;
   display: block;
   transition: 0.3s;
+}
+
+.sidenav a.progressive {
+  padding: 0;
+  max-width: 150px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .sidenav a.icon {
@@ -317,9 +328,6 @@ iframe {
     margin-right: auto;
     margin-bottom: 6vmin;
   }
-  iframe {
-    padding-left: 150px;
-  }
 }
 @media screen and (max-width: 1000px) {
   h1 {
@@ -327,14 +335,12 @@ iframe {
   }
 }
 @media screen and (max-width: 900px) {
-  iframe {
-    padding-left: 0;
+  .main-body {
+    flex-direction: column;
   }
   .sidenav {
     width: 100vw;
-    overflow: hidden;
     padding-top: 0;
-    position: relative;
   }
   .sidenav #myLinks a {
     font-size: 17px;
@@ -343,13 +349,19 @@ iframe {
   .sidenav #myLinks {
     display: none;
   }
-  
+
   .sidenav a.icon {
     display: block;
     position: absolute;
     right: 32px;
     top: 8px;
     font-size: 32px;
+  }
+  .sidenav a.progressive {
+    display: none;
+  }
+  .container {
+    margin-top: 0;
   }
   @-webkit-keyframes animate-sidebar {
     0% {
@@ -361,7 +373,7 @@ iframe {
       -webkit-transform: translateY(0%);
     }
   }
-  
+
   @keyframes animate-sidebar {
     0% {
       opacity: 0;
@@ -377,9 +389,6 @@ iframe {
   body {
     margin: 0;
   }
-  .maxwidth {
-    margin: 0 6%;
-  }
   h1 {
     font-size: 3em;
     margin-bottom: 6vmin;
@@ -393,7 +402,7 @@ iframe {
     animation-delay: 0.4s;
   }
   a.progressive {
-    max-width: 300px;
+    max-width: 200px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -403,7 +412,7 @@ iframe {
   h1 {
     font-size: 2.5em;
   }
-  .main-col{
+  .main-col {
     padding-left: 0;
   }
   .sidenav a.icon {
