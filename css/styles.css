@@ -292,9 +292,14 @@ iframe {
   display: none;
 }
 
-.sidenav #myLinks {
+#myLinks {
   height: 100%;
   background-color: rgb(46, 46, 46);
+}
+
+#myLinks .hoverable-link:hover,
+#myLinks .hoverable-link:focus {
+background-color: #111;
 }
 
 .skills-subheader-list-item {
@@ -339,7 +344,6 @@ iframe {
     flex-direction: column;
   }
   .sidenav {
-    width: 100vw;
     padding-top: 0;
   }
   .sidenav #myLinks a {
