@@ -314,7 +314,7 @@ iframe {
 }
 
 @media screen and (min-width: 1000px) {
-  .skills-highlights {
+  .skills-highlights h1 {
     font-size: 3.5em;
   }
 }
@@ -418,5 +418,26 @@ iframe {
   .sidenav a.icon {
     top: 4px;
     font-size: 24px;
+  }
+  .skills-subheader-list-item li {
+    font-size: 1em;
+  }
+  .skills-highlights h1 {
+    font-size: 2em;
+  }
+  .skills-highlights h2 {
+    font-size: 1.5em;
+  }
+  .skills-highlights h3 {
+    font-size: 1.3em;
+  }
+  .skills-highlights li {
+    font-size: 1em;
+  }
+  .skills-subheader-list-item h3 {
+    font-size: 1.3em;
+  }
+  .col {
+    padding-left: 0;
   }
 }
