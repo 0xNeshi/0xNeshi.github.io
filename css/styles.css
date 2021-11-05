@@ -7,7 +7,6 @@ img,
 strong,
 b,
 i,
-ol,
 caption,
 article,
 header,
@@ -253,7 +252,7 @@ a.progressive img.reveal {
   padding: 20px 20px;
 }
 iframe {
-  flex: 1; 
+  flex: 1;
 }
 .content-container {
   overflow: hidden;
