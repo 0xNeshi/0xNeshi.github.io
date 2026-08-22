@@ -551,6 +551,12 @@
         margin-bottom: 0.5rem;
       }
 
+      .project-header .duration {
+        color: var(--text-muted);
+        font-size: 0.875rem;
+        margin-bottom: 0.75rem;
+      }
+
       .project-header p {
         color: var(--text-secondary);
         margin-bottom: 1rem;
@@ -729,14 +735,13 @@
             margin: 0 auto;
           "
         >
-          I'm a passionate blockchain developer with deep expertise in Rust,
-          Solidity, and smart contract architecture. Currently working as an
-          Open Source Rust Developer for OpenZeppelin, I'm focused on building
-          the future of smart contract development on Arbitrum Stylus. I thrive
-          on solving complex puzzles and creating innovative solutions that push
-          the boundaries of what's possible in the blockchain space. I also
-          mentor other developers and regularly conduct technical interviews,
-          helping grow engineering teams and improve hiring accuracy.
+          I build smart contract libraries and developer tooling in Rust, Move,
+          Cairo, and Solidity. At OpenZeppelin I work on the Arbitrum Stylus
+          contract library, the Sui Move contract library, and event-scanner, a
+          Rust event-indexing crate delivered for a Layer 2 client. Most of what
+          I write is public, so the links below go to the code rather than to a
+          description of it. I also mentor developers and run technical
+          interviews.
         </p>
       </div>
     </section>
@@ -751,21 +756,51 @@
             <div class="experience-info">
               <h3>Open Source Rust Developer</h3>
               <div class="company">OpenZeppelin</div>
-              <div class="duration">2024 - Present</div>
+              <div class="duration">Sep 2024 - Present</div>
             </div>
           </div>
           <ul>
             <li>
-              Developing smart contracts library in Rust for Arbitrum Stylus
+              Led the Stylus SDK v0.9 migration of the
+              <a
+                href="https://github.com/OpenZeppelin/rust-contracts-stylus"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Rust contract library</a
+              >, rewriting 238 files across the library and every example
             </li>
             <li>
-              Led and owned development of <a href="https://crates.io/crates/event-scanner" target="_blank" rel="noopener noreferrer">event-scanner</a> — a Rust library for robust event streaming and processing
+              Co-led
+              <a
+                href="https://crates.io/crates/event-scanner"
+                target="_blank"
+                rel="noopener noreferrer"
+                >event-scanner</a
+              >
+              from proposal to v1.1.1 across 87 merged pull requests
             </li>
             <li>
-              Developed Move on Sui <a href="https://github.com/OpenZeppelin/contracts-sui" target="_blank" rel="noopener noreferrer">smart contracts</a>.
+              Built the ERC-1155 extension suite, SafeERC20, VestingWallet, and
+              ERC-1967 proxy support: 66 merged pull requests and 173 code
+              reviews
             </li>
-            <li>Created Motsu - Rust testing framework for Stylus contracts</li>
-            <li>Contributing to the future of Ethereum scaling solutions</li>
+            <li>
+              Wrote three audited Move modules for
+              <a
+                href="https://github.com/OpenZeppelin/contracts-sui"
+                target="_blank"
+                rel="noopener noreferrer"
+                >OpenZeppelin Contracts for Sui</a
+              >: a rate limiter, a vesting wallet, and a token sale
+            </li>
+            <li>
+              Introduced fuzzing and property testing to the Stylus library,
+              raising statement coverage from about 60% to 85.9%
+            </li>
+            <li>
+              Added Arbitrum Stylus support to the OpenZeppelin Contracts
+              Wizard: ERC-20, ERC-721, and ERC-1155 template families
+            </li>
           </ul>
         </div>
 
@@ -775,16 +810,26 @@
             <div class="experience-info">
               <h3>Cairo Developer & Educator</h3>
               <div class="company">Nethermind</div>
-              <div class="duration">Previous Role</div>
+              <div class="duration">Jun 2024 - Oct 2024</div>
             </div>
           </div>
           <ul>
             <li>
-              Implemented production-ready Starknet smart contract examples
+              Created and launched the Cairo track on Exercism, taking it from
+              an empty repository to an active track in about two months
             </li>
-            <li>Created and launched Cairo learning track on Exercism</li>
-            <li>Developed educational content for "Starknet By Example"</li>
-            <li>Built CI/CD pipelines for open source projects</li>
+            <li>
+              Wrote four worked example contracts for Starknet by Example,
+              including an L1-to-L2 token bridge and an ERC-721 NFT
+            </li>
+            <li>
+              Contributed 25 merged pull requests to the Cairo Book and Starknet
+              by Example, including a bug fix in find_value_iterative
+            </li>
+            <li>
+              Built cairo-test-runner, the containerised test runner that makes
+              the Exercism track executable on Exercism's infrastructure
+            </li>
           </ul>
         </div>
       </div>
@@ -857,10 +902,12 @@
         <div class="project-card">
           <div class="project-header">
             <h3>Motsu Testing Framework</h3>
+            <div class="duration">Contributor, 2025 - Present</div>
             <p>
-              Rust testing framework specifically designed for Arbitrum Stylus
-              smart contracts, providing comprehensive testing utilities and
-              seamless integration.
+              OpenZeppelin's Rust unit-testing framework for Arbitrum Stylus
+              contracts. I added delegate-call support, the ecRecover
+              precompile, and fallback and receive dispatch, and co-authored the
+              public guide. 24,064 crates.io downloads.
             </p>
           </div>
           <div class="project-links">
@@ -879,10 +926,12 @@
         <div class="project-card">
           <div class="project-header">
             <h3>OpenZeppelin Stylus Library</h3>
+            <div class="duration">Contributor, 2024 - Present</div>
             <p>
-              Contributing to the Rust smart contracts library for Arbitrum
-              Stylus, bringing OpenZeppelin's security standards to the Rust
-              ecosystem.
+              OpenZeppelin's Rust smart contract library for Arbitrum Stylus. I
+              led the SDK v0.9 migration, built the ERC-1155 extension suite and
+              ERC-1967 proxy support, and raised statement coverage from about
+              60% to 85.9%. 17,567 crates.io downloads.
             </p>
           </div>
           <div class="project-links">
@@ -898,9 +947,14 @@
         <div class="project-card">
           <div class="project-header">
             <h3>Cairo Track on Exercism</h3>
+            <div class="duration">
+              Creator and lead maintainer, 2024 - Present
+            </div>
             <p>
-              Comprehensive learning track for Cairo programming language on
-              Exercism platform, helping developers learn Starknet development.
+              Built from scratch: concept and practice exercises, a
+              containerised test runner, and support for Cairo 2.7.1 through
+              2.14.0. 376
+              students enrolled, 132 merged pull requests.
             </p>
           </div>
           <div class="project-links">
@@ -916,10 +970,12 @@
         <div class="project-card">
           <div class="project-header">
             <h3>Better Giving DApp</h3>
+            <div class="duration">Contributor, 2023</div>
             <p>
-              Full-stack DeFi platform for crypto philanthropy, enabling
-              donations in multiple cryptocurrencies with smart contract
-              automation.
+              Diamond-pattern EVM contract system for crypto philanthropy. I
+              rebuilt the deployment and facet-upgrade tooling, hardened the
+              multisig contracts, and added test coverage across roughly ten
+              accounts facets, over 134 merged pull requests.
             </p>
           </div>
           <div class="project-links">
@@ -932,9 +988,12 @@
         <div class="project-card">
           <div class="project-header">
             <h3>Hardhat Switch Network Plugin</h3>
+            <div class="duration">
+              Author and sole maintainer, 2024 - Present
+            </div>
             <p>
-              NPM package that allows dynamic network switching during Hardhat
-              task execution, improving development workflow efficiency.
+              Hardhat fixes the network at process start. This plugin switches
+              networks during a task run. 9,087 npm downloads in the past year.
             </p>
           </div>
           <div class="project-links">
@@ -960,8 +1019,9 @@
             margin-bottom: 2rem;
           "
         >
-          Ready to discuss your next blockchain project? Let's connect and
-          explore how we can build innovative solutions together.
+          I work on smart contract libraries, developer tooling, and protocol
+          design in Rust, Move, Cairo, and Solidity. If you have work in that
+          space, email is the fastest way to reach me.
         </p>
         <div class="contact-links">
           <a href="mailto:xinef.it@gmail.com" class="contact-link">
