@@ -16,11 +16,11 @@
     />
     <meta
       name="description"
-      content="Blockchain Developer specializing in Rust, Solidity, and smart contract development. OpenZeppelin contributor working on Arbitrum Stylus and Motsu testing framework."
+      content="Blockchain Developer specializing in Rust, Move, and Solidity smart contract development. OpenZeppelin contributor working on Arbitrum Stylus and the Sui Move contract library."
     />
     <meta
       name="keywords"
-      content="blockchain developer, rust developer, smart contracts, solidity, arbitrum stylus, openzeppelin, motsu, defi, ethereum, starknet, cairo, web3, crypto, smart contract security, dapp development, rust testing framework"
+      content="blockchain developer, rust developer, move developer, smart contracts, solidity, arbitrum stylus, sui, openzeppelin, motsu, defi, ethereum, starknet, cairo, web3, crypto, smart contract security, dapp development, rust testing framework"
     />
     <meta name="author" content="Nenad Misic" />
     <meta name="robots" content="index, follow" />
@@ -38,7 +38,7 @@
     />
     <meta
       property="og:description"
-      content="Blockchain Developer specializing in Rust, Solidity, and smart contract development. OpenZeppelin contributor working on Arbitrum Stylus and Motsu testing framework."
+      content="Blockchain Developer specializing in Rust, Move, and Solidity smart contract development. OpenZeppelin contributor working on Arbitrum Stylus and the Sui Move contract library."
     />
     <meta
       property="og:image"
@@ -63,7 +63,7 @@
     />
     <meta
       name="twitter:description"
-      content="Blockchain Developer specializing in Rust, Solidity, and smart contract development. OpenZeppelin contributor working on Arbitrum Stylus and Motsu testing framework."
+      content="Blockchain Developer specializing in Rust, Move, and Solidity smart contract development. OpenZeppelin contributor working on Arbitrum Stylus and the Sui Move contract library."
     />
     <meta
       name="twitter:image"
@@ -91,7 +91,7 @@
           "@type": "Organization",
           "name": "OpenZeppelin"
         },
-        "description": "Blockchain Developer specializing in Rust, Solidity, and smart contract development. OpenZeppelin contributor working on Arbitrum Stylus.",
+        "description": "Blockchain Developer specializing in Rust, Move, and Solidity smart contract development. OpenZeppelin contributor working on Arbitrum Stylus and the Sui Move contract library.",
         "image": "https://0xneshi.github.io/assets/img/Nenad.jpg",
         "sameAs": [
           "https://github.com/0xNeshi",
@@ -102,6 +102,8 @@
           "Rust Programming",
           "Smart Contracts",
           "Solidity",
+          "Move",
+          "Sui",
           "Arbitrum Stylus",
           "DeFi",
           "Ethereum",
@@ -845,6 +847,8 @@
             <span class="skill-tag">Rust</span>
             <span class="skill-tag">Solidity</span>
             <span class="skill-tag">Cairo</span>
+            <span class="skill-tag">Move</span>
+            <span class="skill-tag">Sui</span>
             <span class="skill-tag">Arbitrum Stylus</span>
             <span class="skill-tag">Ethereum</span>
             <span class="skill-tag">Starknet</span>
@@ -901,8 +905,60 @@
       <div class="projects-grid fade-in">
         <div class="project-card">
           <div class="project-header">
+            <h3>Event Scanner</h3>
+            <div class="duration">Co-owner, 2025 - 2026</div>
+            <p>
+              Rust library that indexes Ethereum L1 events without a database.
+              Delivered for a Layer 2 client. It guarantees delivery, preserves
+              ordering, and survives chain reorganisations behind an async
+              stream API. I authored the architecture proposal and drove the
+              reorg handling, parallel range fetching, and provider
+              abstraction, across 87 merged pull requests from proposal to
+              v1.1.1. 19,090 crates.io downloads.
+            </p>
+          </div>
+          <div class="project-links">
+            <a
+              href="https://github.com/OpenZeppelin/Event-Scanner"
+              class="project-link"
+            >
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a
+              href="https://crates.io/crates/event-scanner"
+              class="project-link"
+            >
+              <i class="fas fa-external-link-alt"></i> crates.io
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>OpenZeppelin Contracts for Sui</h3>
+            <div class="duration">Module owner, 2026</div>
+            <p>
+              OpenZeppelin's Move contract library for Sui. I wrote the rate
+              limiter, the vesting wallet, and the token sale modules, and took
+              all three through external audit and findings remediation across
+              75 merged pull requests and three releases. The rate limiter
+              carries three strategies in one embeddable type.
+            </p>
+          </div>
+          <div class="project-links">
+            <a
+              href="https://github.com/OpenZeppelin/contracts-sui"
+              class="project-link"
+            >
+              <i class="fab fa-github"></i> Repository
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
             <h3>Motsu Testing Framework</h3>
-            <div class="duration">Contributor, 2025 - Present</div>
+            <div class="duration">Contributor, 2025</div>
             <p>
               OpenZeppelin's Rust unit-testing framework for Arbitrum Stylus
               contracts. I added delegate-call support, the ecRecover
@@ -926,7 +982,7 @@
         <div class="project-card">
           <div class="project-header">
             <h3>OpenZeppelin Stylus Library</h3>
-            <div class="duration">Contributor, 2024 - Present</div>
+            <div class="duration">Contributor, 2024 - 2025</div>
             <p>
               OpenZeppelin's Rust smart contract library for Arbitrum Stylus. I
               led the SDK v0.9 migration, built the ERC-1155 extension suite and
