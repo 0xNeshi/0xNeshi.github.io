@@ -16,11 +16,11 @@
     />
     <meta
       name="description"
-      content="Blockchain Developer specializing in Rust, Solidity, and smart contract development. OpenZeppelin contributor working on Arbitrum Stylus and Motsu testing framework."
+      content="Blockchain Developer specializing in Rust, Move, and Solidity smart contract development. OpenZeppelin contributor working on Arbitrum Stylus and the Sui Move contract library."
     />
     <meta
       name="keywords"
-      content="blockchain developer, rust developer, smart contracts, solidity, arbitrum stylus, openzeppelin, motsu, defi, ethereum, starknet, cairo, web3, crypto, smart contract security, dapp development, rust testing framework"
+      content="blockchain developer, rust developer, move developer, smart contracts, solidity, arbitrum stylus, sui, openzeppelin, motsu, defi, ethereum, starknet, cairo, web3, crypto, smart contract security, dapp development, rust testing framework"
     />
     <meta name="author" content="Nenad Misic" />
     <meta name="robots" content="index, follow" />
@@ -38,11 +38,11 @@
     />
     <meta
       property="og:description"
-      content="Blockchain Developer specializing in Rust, Solidity, and smart contract development. OpenZeppelin contributor working on Arbitrum Stylus and Motsu testing framework."
+      content="Blockchain Developer specializing in Rust, Move, and Solidity smart contract development. OpenZeppelin contributor working on Arbitrum Stylus and the Sui Move contract library."
     />
     <meta
       property="og:image"
-      content="https://0xneshi.github.io/portfolio/assets/img/thumbnail.jpg"
+      content="https://0xneshi.github.io/assets/img/thumbnail.png"
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -63,7 +63,7 @@
     />
     <meta
       name="twitter:description"
-      content="Blockchain Developer specializing in Rust, Solidity, and smart contract development. OpenZeppelin contributor working on Arbitrum Stylus and Motsu testing framework."
+      content="Blockchain Developer specializing in Rust, Move, and Solidity smart contract development. OpenZeppelin contributor working on Arbitrum Stylus and the Sui Move contract library."
     />
     <meta
       name="twitter:image"
@@ -91,8 +91,8 @@
           "@type": "Organization",
           "name": "OpenZeppelin"
         },
-        "description": "Blockchain Developer specializing in Rust, Solidity, and smart contract development. OpenZeppelin contributor working on Arbitrum Stylus.",
-        "image": "https://0xneshi.github.io/portfolio/assets/img/Nenad.jpg",
+        "description": "Blockchain Developer specializing in Rust, Move, and Solidity smart contract development. OpenZeppelin contributor working on Arbitrum Stylus and the Sui Move contract library.",
+        "image": "https://0xneshi.github.io/assets/img/Nenad.jpg",
         "sameAs": [
           "https://github.com/0xNeshi",
           "https://www.linkedin.com/in/nenadmisic/"
@@ -102,6 +102,8 @@
           "Rust Programming",
           "Smart Contracts",
           "Solidity",
+          "Move",
+          "Sui",
           "Arbitrum Stylus",
           "DeFi",
           "Ethereum",
@@ -551,6 +553,12 @@
         margin-bottom: 0.5rem;
       }
 
+      .project-header .duration {
+        color: var(--text-muted);
+        font-size: 0.875rem;
+        margin-bottom: 0.75rem;
+      }
+
       .project-header p {
         color: var(--text-secondary);
         margin-bottom: 1rem;
@@ -729,14 +737,13 @@
             margin: 0 auto;
           "
         >
-          I'm a passionate blockchain developer with deep expertise in Rust,
-          Solidity, and smart contract architecture. Currently working as an
-          Open Source Rust Developer for OpenZeppelin, I'm focused on building
-          the future of smart contract development on Arbitrum Stylus. I thrive
-          on solving complex puzzles and creating innovative solutions that push
-          the boundaries of what's possible in the blockchain space. I also
-          mentor other developers and regularly conduct technical interviews,
-          helping grow engineering teams and improve hiring accuracy.
+          I build smart contract libraries and developer tooling in Rust, Move,
+          Cairo, and Solidity. At OpenZeppelin I work on the Arbitrum Stylus
+          contract library, the Sui Move contract library, and event-scanner, a
+          Rust event-indexing crate delivered for a Layer 2 client. Most of what
+          I write is public, so the links below go to the code rather than to a
+          description of it. I also mentor developers and run technical
+          interviews.
         </p>
       </div>
     </section>
@@ -751,21 +758,50 @@
             <div class="experience-info">
               <h3>Open Source Rust Developer</h3>
               <div class="company">OpenZeppelin</div>
-              <div class="duration">2024 - Present</div>
+              <div class="duration">Sep 2024 - Present</div>
             </div>
           </div>
           <ul>
             <li>
-              Developing smart contracts library in Rust for Arbitrum Stylus
+              Led the Stylus SDK v0.9 migration of the
+              <a
+                href="https://github.com/OpenZeppelin/rust-contracts-stylus"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Rust contract library</a
+              >, rewriting 238 files across the library and every example
             </li>
             <li>
-              Led and owned development of <a href="https://crates.io/crates/event-scanner" target="_blank" rel="noopener noreferrer">event-scanner</a> — a Rust library for robust event streaming and processing
+              Co-led
+              <a
+                href="https://crates.io/crates/event-scanner"
+                target="_blank"
+                rel="noopener noreferrer"
+                >event-scanner</a
+              >
+              from proposal to v1.1.1
             </li>
             <li>
-              Developed Move on Sui <a href="https://github.com/OpenZeppelin/contracts-sui" target="_blank" rel="noopener noreferrer">smart contracts</a>.
+              Built the ERC-1155 extension suite, SafeERC20, VestingWallet,
+              and ERC-1967 proxy support for the library
             </li>
-            <li>Created Motsu - Rust testing framework for Stylus contracts</li>
-            <li>Contributing to the future of Ethereum scaling solutions</li>
+            <li>
+              Wrote three audited Move modules for
+              <a
+                href="https://github.com/OpenZeppelin/contracts-sui"
+                target="_blank"
+                rel="noopener noreferrer"
+                >OpenZeppelin Contracts for Sui</a
+              >: a rate limiter, a vesting wallet, and a token sale
+            </li>
+            <li>
+              Introduced fuzzing and property testing to the Stylus library,
+              raising statement coverage from about 60% to 85.9%
+            </li>
+            <li>
+              Added Arbitrum Stylus support to the OpenZeppelin Contracts
+              Wizard: ERC-20, ERC-721, and ERC-1155 template families
+            </li>
           </ul>
         </div>
 
@@ -775,16 +811,26 @@
             <div class="experience-info">
               <h3>Cairo Developer & Educator</h3>
               <div class="company">Nethermind</div>
-              <div class="duration">Previous Role</div>
+              <div class="duration">Jun 2024 - Oct 2024</div>
             </div>
           </div>
           <ul>
             <li>
-              Implemented production-ready Starknet smart contract examples
+              Created and launched the Cairo track on Exercism, taking it from
+              an empty repository to an active track in about two months
             </li>
-            <li>Created and launched Cairo learning track on Exercism</li>
-            <li>Developed educational content for "Starknet By Example"</li>
-            <li>Built CI/CD pipelines for open source projects</li>
+            <li>
+              Wrote four worked example contracts for Starknet by Example,
+              including an L1-to-L2 token bridge and an ERC-721 NFT
+            </li>
+            <li>
+              Contributed corrections and new sections to the Cairo Book,
+              including a bug fix in find_value_iterative
+            </li>
+            <li>
+              Built cairo-test-runner, the containerised test runner that makes
+              the Exercism track executable on Exercism's infrastructure
+            </li>
           </ul>
         </div>
       </div>
@@ -800,6 +846,8 @@
             <span class="skill-tag">Rust</span>
             <span class="skill-tag">Solidity</span>
             <span class="skill-tag">Cairo</span>
+            <span class="skill-tag">Move</span>
+            <span class="skill-tag">Sui</span>
             <span class="skill-tag">Arbitrum Stylus</span>
             <span class="skill-tag">Ethereum</span>
             <span class="skill-tag">Starknet</span>
@@ -856,18 +904,75 @@
       <div class="projects-grid fade-in">
         <div class="project-card">
           <div class="project-header">
-            <h3>Motsu Testing Framework</h3>
+            <h3>Event Scanner</h3>
+            <div class="duration">Co-owner, 2025 - 2026</div>
             <p>
-              Rust testing framework specifically designed for Arbitrum Stylus
-              smart contracts, providing comprehensive testing utilities and
-              seamless integration.
+              Rust library that indexes Ethereum L1 events without a database.
+              Delivered for a Layer 2 client. It guarantees delivery, preserves
+              ordering, and survives chain reorganisations behind an async
+              stream API. I authored the architecture proposal and drove the
+              reorg handling, parallel range fetching, and provider
+              abstraction, from the proposal through to v1.1.1. 19,090
+              crates.io downloads.
             </p>
           </div>
           <div class="project-links">
-            <a href="#" class="project-link">
+            <a
+              href="https://github.com/OpenZeppelin/Event-Scanner"
+              class="project-link"
+            >
               <i class="fab fa-github"></i> GitHub
             </a>
-            <a href="#" class="project-link">
+            <a
+              href="https://crates.io/crates/event-scanner"
+              class="project-link"
+            >
+              <i class="fas fa-external-link-alt"></i> crates.io
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>OpenZeppelin Contracts for Sui</h3>
+            <div class="duration">Module owner, 2026</div>
+            <p>
+              OpenZeppelin's Move contract library for Sui. I wrote the rate
+              limiter, the vesting wallet, and the token sale modules, and
+              took all three through external audit and findings remediation
+              across three releases. The rate limiter carries three strategies
+              in one embeddable type.
+            </p>
+          </div>
+          <div class="project-links">
+            <a
+              href="https://github.com/OpenZeppelin/contracts-sui"
+              class="project-link"
+            >
+              <i class="fab fa-github"></i> Repository
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Motsu Testing Framework</h3>
+            <div class="duration">Contributor, 2025</div>
+            <p>
+              OpenZeppelin's Rust unit-testing framework for Arbitrum Stylus
+              contracts. I added delegate-call support, the ecRecover
+              precompile, and fallback and receive dispatch, and co-authored the
+              public guide. 24,064 crates.io downloads.
+            </p>
+          </div>
+          <div class="project-links">
+            <a
+              href="https://github.com/OpenZeppelin/stylus-test-helpers"
+              class="project-link"
+            >
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://docs.rs/motsu" class="project-link">
               <i class="fas fa-external-link-alt"></i> Documentation
             </a>
           </div>
@@ -876,14 +981,19 @@
         <div class="project-card">
           <div class="project-header">
             <h3>OpenZeppelin Stylus Library</h3>
+            <div class="duration">Contributor, 2024 - 2025</div>
             <p>
-              Contributing to the Rust smart contracts library for Arbitrum
-              Stylus, bringing OpenZeppelin's security standards to the Rust
-              ecosystem.
+              OpenZeppelin's Rust smart contract library for Arbitrum Stylus. I
+              led the SDK v0.9 migration, built the ERC-1155 extension suite and
+              ERC-1967 proxy support, and raised statement coverage from about
+              60% to 85.9%. 17,567 crates.io downloads.
             </p>
           </div>
           <div class="project-links">
-            <a href="#" class="project-link">
+            <a
+              href="https://github.com/OpenZeppelin/rust-contracts-stylus"
+              class="project-link"
+            >
               <i class="fab fa-github"></i> Repository
             </a>
           </div>
@@ -892,9 +1002,13 @@
         <div class="project-card">
           <div class="project-header">
             <h3>Cairo Track on Exercism</h3>
+            <div class="duration">
+              Creator and lead maintainer, 2024 - Present
+            </div>
             <p>
-              Comprehensive learning track for Cairo programming language on
-              Exercism platform, helping developers learn Starknet development.
+              Built from scratch: concept and practice exercises, a
+              containerised test runner, and support for Cairo 2.7.1 through
+              2.14.0. 376 students enrolled.
             </p>
           </div>
           <div class="project-links">
@@ -910,10 +1024,12 @@
         <div class="project-card">
           <div class="project-header">
             <h3>Better Giving DApp</h3>
+            <div class="duration">Contributor, 2023</div>
             <p>
-              Full-stack DeFi platform for crypto philanthropy, enabling
-              donations in multiple cryptocurrencies with smart contract
-              automation.
+              Diamond-pattern EVM contract system for crypto philanthropy. I
+              rebuilt the deployment and facet-upgrade tooling, hardened the
+              multisig contracts, and added test coverage across roughly ten
+              accounts facets.
             </p>
           </div>
           <div class="project-links">
@@ -926,9 +1042,12 @@
         <div class="project-card">
           <div class="project-header">
             <h3>Hardhat Switch Network Plugin</h3>
+            <div class="duration">
+              Author and sole maintainer, 2024 - Present
+            </div>
             <p>
-              NPM package that allows dynamic network switching during Hardhat
-              task execution, improving development workflow efficiency.
+              Hardhat fixes the network at process start. This plugin switches
+              networks during a task run. 9,087 npm downloads in the past year.
             </p>
           </div>
           <div class="project-links">
@@ -954,8 +1073,9 @@
             margin-bottom: 2rem;
           "
         >
-          Ready to discuss your next blockchain project? Let's connect and
-          explore how we can build innovative solutions together.
+          I work on smart contract libraries, developer tooling, and protocol
+          design in Rust, Move, Cairo, and Solidity. If you have work in that
+          space, email is the fastest way to reach me.
         </p>
         <div class="contact-links">
           <a href="mailto:xinef.it@gmail.com" class="contact-link">
